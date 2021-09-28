@@ -1,9 +1,13 @@
 {
   "name": "assignment-1---express-portfolio-site",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^12.00.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.1.1",
@@ -16,6 +20,18 @@
     "jquery": "^3.6.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.12"
-  }
+  },
+  "description": "express portfolio site",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielMJSilva/COMP229-Assignment01.git"
+  },
+  "author": "Daniel Machado Justo da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielMJSilva/COMP229-Assignment01/issues"
+  },
+  "homepage": "https://github.com/DanielMJSilva/COMP229-Assignment01#readme"
 }
-
