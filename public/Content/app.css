@@ -1,1 +1,21 @@
 /*custom css goes here */
+.background {
+    background-color:rgb(255, 255, 211) ;
+}
+
+.background-nav {
+    background-color:rgb(243, 212, 36) ;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
