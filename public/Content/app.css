@@ -19,3 +19,7 @@
     clear: both;
   }
   
+  .clear { 
+      clear: both; 
+      height: 60px; 
+    }
