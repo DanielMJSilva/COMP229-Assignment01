@@ -1,3 +1,4 @@
+
 <%- include partials/header.ejs %>
 
 <%- include partials/main_nav.ejs %>
@@ -8,6 +9,30 @@
         <h1 class="display-4"><b><%= title %></b></h1>
       </div>
       <div>
+        <div class="container">
+          <!-- Form from https://www.w3schools.com/howto/howto_css_contact_form.asp -->
+          <form action="mailto:dmachad7@my.centennialcollege.ca" method="POST">
+        
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="brazil">Brazil</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit" onclick="window.location.href='https://comp229-assignmet01.herokuapp.com/home'">
+        
+          </form>
+        </div>
         <br>
         <p>I am looking forward to hearing from you.</p>
         <div>
@@ -22,3 +47,4 @@
 <%- include partials/bottom_nav.ejs %>
 
 <%- include partials/footer.ejs %>
+
