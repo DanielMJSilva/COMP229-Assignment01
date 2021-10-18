@@ -28,12 +28,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielMJSilva/COMP229_Assignment2.git"
+    "url": "git+https://github.com/DanielMJSilva/COMP229-Assignment01.git"
   },
   "author": "Daniel Machado Justo da Silva",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DanielMJSilva/COMP229_Assignment2/issues"
+    "url": "https://github.com/DanielMJSilva/COMP229-Assignment01/issues"
   },
-  "homepage": "https://github.com/DanielMJSilva/COMP229_Assignment2#readme"
+  "homepage": "https://github.com/DanielMJSilva/COMP229-Assignment01#readme"
 }
