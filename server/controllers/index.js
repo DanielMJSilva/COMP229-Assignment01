@@ -6,21 +6,22 @@ let passport = require('passport');
 //create the user Model instance
 let userModel = require('../models/user');
 let User = userModel.User; // alias
+
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home'});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', {title: 'About Me'});
+    res.render('about', {title: 'About Me', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('index', {title: 'Projects'});
+    res.render('projects', {title: 'Projects', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('index', {title: 'Services'});
+    res.render('services', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', {title: 'Contact Me'});
+    res.render('contact', {title: 'Contact Me', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -32,7 +33,7 @@ module.exports.displayLoginPage = (req, res, next) => {
         title: "Login",
         messages: req.flash('loginMessage'),
         displayName: req.user ? req.user.displayName : ''
-        })
+        });
     }
     else
     {
@@ -61,8 +62,7 @@ module.exports.processLoginPage = (req, res, next) => {
             }
             return res.redirect('/business-list');
         });
-    }
-    )(req, res, next);
+    })(req, res, next);
 }
 
 module.exports.displayRegisterPage = (req, res, next) => {
