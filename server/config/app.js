@@ -4,6 +4,13 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+//modules for authenticatuion
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let fladh = require('connect-flash');
+
 // database setup
 let mongoose = require('mongoose');
 let DB = require('./db');
@@ -21,6 +28,7 @@ let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let bookrouter = require('../routes/book'); //example
 let listrouter = require('../routes/businessList');
+const { session } = require('passport');
 
 let app = express();
 
@@ -34,6 +42,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+//setup express session
+app.use(session9({
+  secret: "SomeSecret",
+  saveUninitialized: false,
+  resave: false
+}));
+
+// initialize flash
+app.use(flash());
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
