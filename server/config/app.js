@@ -9,7 +9,7 @@ let session = require('express-session');
 let passport = require('passport');
 let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
-let fladh = require('connect-flash');
+let flash = require('connect-flash');
 
 // database setup
 let mongoose = require('mongoose');
@@ -28,7 +28,7 @@ let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let bookrouter = require('../routes/book'); //example
 let listrouter = require('../routes/businessList');
-const { session } = require('passport');
+
 
 let app = express();
 
@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 //setup express session
-app.use(session9({
+app.use(session({
   secret: "SomeSecret",
   saveUninitialized: false,
   resave: false
@@ -56,6 +56,19 @@ app.use(flash());
 //initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+// passport user configuration
+
+//create a User Model Intance
+let userModel = require('../models/user');
+let User = userModel.User;
+
+// implement a User Authentication Strategy
+passport.use(User.createStrategy());
+
+// Serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
