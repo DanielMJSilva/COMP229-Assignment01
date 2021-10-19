@@ -7,7 +7,7 @@ let businessListModel = mongoose.Schema({
     email: String
     },
     {
-        collections: "businessContact" //name of the collection
+        collection: "businessContact" //name of the collection
     }
 );
 

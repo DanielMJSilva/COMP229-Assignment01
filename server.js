@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('./config/app');
+var app = require('./server/config/app');
 var debug = require('debug')('assignment-1---express-portfolio-site:server');
 var http = require('http');
 

@@ -54,6 +54,16 @@
           <li class="nav-item" style="font-size:30px">
             <a class="nav-link active" aria-current="page" href="/contact"><i class="fas fa-phone-square-alt"></i> Contact</a>
           </li>
+
+          <% if (title == "Business Contact"){ %>
+            <li class="nav-item" active></li>
+            <%} else { %>
+            <li class="nav-item">
+            <% } %>
+          <li class="nav-item" style="font-size:30px">
+            <a class="nav-link active" aria-current="page" href="/business-list"><i class="fas fa-book"></i> Contact</a>
+          </li>
+
       </div>
     </div>
   </nav>
