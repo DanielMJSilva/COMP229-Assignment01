@@ -30,6 +30,7 @@
   /* https://www.w3schools.com/howto/howto_css_contact_form.asp */
 
 /* Style inputs with type="text", select elements and textareas */
+
 input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
@@ -42,6 +43,7 @@ input[type=text], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
+/*
 input[type=submit] {
   background-color:rgb(243, 212, 36);
   color: rgb(0, 0, 0);
@@ -52,10 +54,11 @@ input[type=submit] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
+/*
 input[type=submit]:hover {
   background-color: rgb(180, 157, 24);
 }
-
+*/
 /* Add some padding around the form */
 .container {
   border-radius: 5px;
