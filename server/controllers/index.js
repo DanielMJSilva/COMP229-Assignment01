@@ -107,7 +107,7 @@ module.exports.processRegisterPage = (req, res, next) => {
             {
                 title: 'Register',
                 messages: req.flash('registerMessage'),
-                displayName: req.user ? req.user.displayName : ''
+                displayName: req.user ? req.user.displayName : ""
             });
         }
         else
@@ -117,7 +117,7 @@ module.exports.processRegisterPage = (req, res, next) => {
             // redirect the user and authenticate them
 
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/bussiness-list');
+                res.redirect('/business-list');
             });
         }
     });

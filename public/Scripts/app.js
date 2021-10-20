@@ -4,8 +4,8 @@
     function Start()
     {
         console.log("App Started...");
-        let deleterButtons = document.querySelectorAll('.btn-danger')
-        for(button of deleterButtons)
+        let deleteButtons = document.querySelectorAll('.btn-danger')
+        for(button of deleteButtons)
         {
             button.addEventListener('click', (event) =>{
                 if(!confirm("Are you sure?"))
